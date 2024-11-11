@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <title>Product managment system</title>
+</head>
+
+<body>
+
+  <nav class="navbar bg-black p-4 ">
+    <div class="container-fluid ">
+      <span class="navbar-text m-auto text-white fs-4">
+        product management system (CRUDS)
+      </span>
+    </div>
+  </nav>
+
+
+  <section class="container-fluid mb-0 w-100  bg-dark pt-6">
+    <div class="inputs w-75 mx-auto p-4">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control title" id="floatingInput " placeholder="name@example.com">
+        <label for="floatingInput">title</label>
+      </div>
+
+      <div class="numbers d-flex justify-content-between">
+        <div class="form-floating mb-3 w-18  ">
+          <input type= "number" onkeyup="getTotal()" class="form-control price" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Price</label>
+        </div>
+
+        <div class="form-floating mb-3 w-18 ">
+          <input type= "number" onkeyup="getTotal()" class="form-control tax" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">taxes</label>
+        </div>
+
+        <div class="form-floating mb-3 w-18 ">
+          <input type= "number" onkeyup="getTotal()" class="form-control ads" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">ads</label>
+        </div>
+
+        <div class="form-floating mb-3 w-18 ">
+          <input type= "number" onkeyup="getTotal()" class="form-control discount" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">discount</label>
+        </div>
+
+        <div class="form-floating mb-3 w-18 ">
+          <input type= "number" onkeyup="getTotal()" class="form-control total" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput" class="totalPrice">total:</label>
+        </div>
+      </div>
+     
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control amount" id="floatingInput " placeholder="name@example.com">
+        <label for="floatingInput">amount</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control category" id="floatingInput " placeholder="name@example.com">
+        <label for="floatingInput">category</label>
+      </div>
+      
+
+
+      <button type="button" class="btn btn-outline-success w-100 createBtn">Create new item</button>
+      <nav class="navbar ">
+        <form class="form-inline w-100">
+          <input class="form-control mr-sm-2 w-100 searchInput"  type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </nav>
+
+     <div class="btn-search d-flex justify-content-between ">
+      <button type="button" onclick="searhProductByTitle()" class="btn btn-outline-secondary w-49 mb-2 SearchByTitle">Search by title</button>
+      <button type="button" onclick="searhProductByCategory()" class="btn btn-outline-secondary w-49 mb-2 SearchByCategory">Search by category</button>
+     </div>
+     <button type="button" onclick=" updateProduct()" class="btn btn-outline-danger w-100 mb-2">Update item</button>
+      <button type="button" onclick="deleteAllItems()" class="btn btn-outline-danger w-100 deleteAllItems">Delete all items</button>
+    </div>
+
+    <table class="container table text-center mt-2">
+      <thead>
+        <tr >
+          <td class="fs-5" >ID</td>
+          <td class="fs-5" >TITLE</td>
+          <td class="fs-5" >PRICE</td>
+          <td class="fs-5" >TAXES</td>
+          <td class="fs-5" >ADS</td>
+          <td class="fs-5" >DISCOUNT</td>
+          <td class="fs-5" >TOTAL</td>
+          <td class="fs-5" >COUNT</td>
+          <td class="fs-5" >CATEGORY</td>
+          <td class="fs-5" >UPDATE</td>
+          <td class="fs-5" >DELETE</td>
+        </tr>
+      </thead>
+
+      <tbody class="dataContainer">
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button type="button" class="btn btn-outline-primary updateBtn">update</button></td>
+          <td><button type="button" class="btn btn-outline-danger deleteBtn">delete</button></td>
+         
+        </tr> -->
+      </tbody>
+
+    </table>
+
+  </section>
+
+
+  <footer class="container-fluid bg-black p-3">
+    <p class="text-white text-center m-auto">© 2024 Copyright:Nour Amer</p>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>
