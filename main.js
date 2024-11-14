@@ -133,7 +133,7 @@ function validateDiscount() {
 }
 
 function validateAmount() {
-    let amountRegex = /^(?:[1-9]|[1-4][0-9]|50)$ /;
+    let amountRegex = /^(?:[1-9]|[1-4][0-9]|50)$/;
     let amountValue = productAmountInput.value;
     let msgAmountError = document.querySelector('.msgAmountError');
     
