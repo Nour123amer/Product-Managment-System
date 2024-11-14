@@ -13904,15 +13904,15 @@ fieldset:disabled .btn {
 .form-floating>.form-control,
 .form-floating>.form-control-plaintext,
 .form-floating>.form-select {
-  height: calc(1.5rem + calc(var(--bs-border-width) * 1)) !important;
-  min-height: calc(1.5rem + calc(var(--bs-border-width) * 1)) !important;
+  height: calc(3rem + calc(var(--bs-border-width) * 1)) !important;
+  min-height: calc(3rem + calc(var(--bs-border-width) * 1)) !important;
   line-height: 1.25
 }
 
 .form-control {
   display: block;
   width: 100%;
-  padding: .375rem .75rem;
+  padding: 0.375rem .75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1 !important;

@@ -23,45 +23,54 @@
   <section class="container-fluid mb-0 w-100  bg-dark pt-6">
     <div class="inputs w-75 mx-auto p-4">
       <div class="form-floating mb-3">
-        <input type="text" class="form-control title" id="floatingInput " placeholder="name@example.com">
+        <input type="text" oninput="validateTitle()" class="form-control title in-valid" id="floatingInput " placeholder="name@example.com">
         <label for="floatingInput">title</label>
+        <p class="text-danger d-none msgTitleError">Tile must start with capital letter followed by 3 letters at least.</p>
       </div>
 
       <div class="numbers d-flex justify-content-between">
         <div class="form-floating mb-3 w-18  ">
-          <input type= "number" onkeyup="getTotal()" class="form-control price" id="floatingInput" placeholder="name@example.com">
+          <input type= "number" oninput="validatePrice()" onkeyup="getTotal()" class="form-control price in-valid" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">Price</label>
+          <p class="text-danger d-none msgPriceError">Price should be between 1 and 100$</p>
         </div>
 
         <div class="form-floating mb-3 w-18 ">
-          <input type= "number" onkeyup="getTotal()" class="form-control tax" id="floatingInput" placeholder="name@example.com">
+          <input type= "number" oninput="validateTaxe()" onkeyup="getTotal()" class="form-control tax in-valid" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">taxes</label>
+          <p class="text-danger d-none msgTaxeError">Taxes should be a number.</p>
         </div>
 
         <div class="form-floating mb-3 w-18 ">
-          <input type= "number" onkeyup="getTotal()" class="form-control ads" id="floatingInput" placeholder="name@example.com">
+          <input type= "number" oninput="validateAds()" onkeyup="getTotal()" class="form-control ads in-valid" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">ads</label>
+          <p class="text-danger d-none msgAdsError">Ads should be a number.</p>
         </div>
 
         <div class="form-floating mb-3 w-18 ">
-          <input type= "number" onkeyup="getTotal()" class="form-control discount" id="floatingInput" placeholder="name@example.com">
+          <input type= "number" oninput="validateDiscount()" onkeyup="getTotal()" class="form-control discount in-valid" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">discount</label>
+          <p class="text-danger d-none msgDiscountError">Discount should be between 0.2 and 0.5</p>
         </div>
 
         <div class="form-floating mb-3 w-18 ">
-          <input type= "number" onkeyup="getTotal()" class="form-control total" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput" class="totalPrice">total:</label>
+          <input type= "number" onkeyup="getTotal()" class="form-control total totalPrice" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">total:</label>
+          
         </div>
       </div>
      
       <div class="form-floating mb-3">
-        <input type="number" class="form-control amount" id="floatingInput " placeholder="name@example.com">
+        <input type="number" oninput="validateAmount()" class="form-control amount in-valid" id="floatingInput " placeholder="name@example.com">
         <label for="floatingInput">amount</label>
+        <p class="text-danger d-none msgAmountError">Amount should be a number between 1 and 50</p>
+
       </div>
 
       <div class="form-floating mb-3">
-        <input type="text" class="form-control category" id="floatingInput " placeholder="name@example.com">
+        <input type="text" oninput="validateCategory()" class="form-control category" id="floatingInput " placeholder="name@example.com">
         <label for="floatingInput">category</label>
+        <p class="text-danger d-none msgCategoryError">category must start with capital letter followed by 2 letters at least.</p>
       </div>
       
 
